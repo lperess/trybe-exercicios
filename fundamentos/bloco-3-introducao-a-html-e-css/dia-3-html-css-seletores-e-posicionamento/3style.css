@@ -1,0 +1,29 @@
+h1, p {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+ol li {
+    font-family: sans-serif;
+    transition: background-color 0.2s;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+ol li:hover {
+    background-color: lightblue;
+}
+
+ol li:active {
+    font-family: monospace;
+}
+
+ul li {
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-bottom: 3px;
+}
