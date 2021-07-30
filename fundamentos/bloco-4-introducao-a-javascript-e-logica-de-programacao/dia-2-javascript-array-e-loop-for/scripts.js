@@ -73,3 +73,38 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27]
 // for (let i = 0; i < exercicio8.length; i += 1) {
 //   console.log(exercicio8[i]/2)
 // }
+
+// Exercício Bônus 1
+
+// for (let index = 1; index < numbers.length; index += 1) {
+//   for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
+//     if (numbers[index] < numbers[secondIndex]) {
+//       let aux = numbers[index];
+//       numbers[index] = numbers[secondIndex];
+//       numbers[secondIndex] = aux;
+//     }
+//   }
+// }
+// console.log(numbers)
+
+// Exercício Bônus 2
+
+// for (let index = 1; index < numbers.length; index += 1) {
+//   for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
+//     if (numbers[index] > numbers[secondIndex]) {
+//       let aux = numbers[index];
+//       numbers[index] = numbers[secondIndex];
+//       numbers[secondIndex] = aux;
+//     }
+//   }
+// }
+// console.log(numbers)
+
+// Exercício Bônus 3
+
+let exercicioBonus = []
+for (index = 0; index < (numbers.length-1); index += 1) {
+  exercicioBonus.push(numbers[index]*numbers[index+1])
+}
+exercicioBonus.push(numbers[numbers.length-1]*2)
+console.log(exercicioBonus)
