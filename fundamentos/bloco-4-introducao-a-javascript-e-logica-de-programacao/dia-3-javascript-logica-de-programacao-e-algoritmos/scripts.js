@@ -56,3 +56,28 @@
 //     na += 1
 //   }
 // }
+
+// Exercício 4
+
+let n = 5
+let ne = n/2-0.5
+let ee = 0
+let nn = 1
+
+if (n <= 1 || n % 2 ===0) {
+  console.log('A variável \'n\' precisa ser maior que 1 e ímpar')
+}
+else {
+  for (let l = 1; l < n/2+1; l += 1) {
+    let linha = ''
+    for (let e = ne; e > ee; e -= 1) {
+      linha += ' '
+    }
+    for (let a = 1; a <= nn; a += 1) {
+      linha += '*'
+    }
+    console.log(linha)
+    ee += 1
+    nn += 2
+  }
+}
