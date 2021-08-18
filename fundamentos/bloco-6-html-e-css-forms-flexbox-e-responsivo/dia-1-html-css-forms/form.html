@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Currículo</title>
+  <style>
+    * {
+      font-family: sans-serif;
+    }
+
+    div {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="" method="GET">
+    <fieldset>
+      <div>
+        <label for="name-input">Nome Completo</label>
+        <input type="text" name="name" id="name-input" maxlength="40" placeholder="Digite seu nome" required>
+      </div>
+      <div>
+        <label for="email-input">E-mail</label>
+        <input type="email" name="email" id="email-input" maxlength="50" placeholder="Digite seu e-mail" required>
+      </div>
+      <div>
+        <label for="cpf-input">CPF</label>
+        <input type="text" name="cpf" id="cpf-input" maxlength="11" placeholder="Apenas números" required>
+      </div>
+      <div>
+        <label for="address-input">Endereço</label>
+        <input type="text" name="address" id="address-input" maxlength="200" placeholder="Rua, Número, Bairro" required>
+      </div>
+      <div>
+        <label for="city-input">Cidade</label>
+        <input type="text" name="city" id="city-input" maxlength="28" placeholder="Cidade" required>
+      </div>
+      <div>
+        <label for="state-select">Estado</label>
+        <select name="state" id="state-select" required></select>
+      </div>
+      <div>
+        <legend>Tipo de residência</legend>
+        <label for="casaInput">Casa</label>
+        <input type="radio" name="tipo-residência" value="casa" id="casaInput" required>
+        <label for="apartamentoInput">Apartamento</label>
+        <input type="radio" name="tipo-residência" value="apartamento" id="apartamentoInput">
+      </div>
+
+    </fieldset>
+  </form>
+  <script src="script.js"></script>
+</body>
+
+</html>
