@@ -18,6 +18,7 @@
 <body>
   <form action="" method="GET">
     <fieldset>
+      <legend>Dados pessoais</legend>
       <div>
         <label for="name-input">Nome Completo</label>
         <input type="text" name="name" id="name-input" maxlength="40" placeholder="Digite seu nome" required>
@@ -40,17 +41,40 @@
       </div>
       <div>
         <label for="state-select">Estado</label>
-        <select name="state" id="state-select" required></select>
+        <select name="state" id="state-select" required>
+          <option disabled selected value>Selecione seu estado</option>
+        </select>
       </div>
       <div>
-        <legend>Tipo de residência</legend>
-        <label for="casaInput">Casa</label>
-        <input type="radio" name="tipo-residência" value="casa" id="casaInput" required>
-        <label for="apartamentoInput">Apartamento</label>
-        <input type="radio" name="tipo-residência" value="apartamento" id="apartamentoInput">
+        <label for="casa-input">Casa</label>
+        <input type="radio" name="tipo-residência" value="casa" id="casa-input" required>
+        <label for="apartamento-input">Apartamento</label>
+        <input type="radio" name="tipo-residência" value="apartamento" id="apartamento-input">
       </div>
-
     </fieldset>
+    <fieldset>
+      <legend>Dados do seu último emprego</legend>
+      <label for="curriculum-input">Resumo do currículo</label>
+      <div>
+        <textarea name="curriculo" id="curriculum-input" rows="5" maxlength="1000" required></textarea>
+      </div>
+      <div>
+        <label for="role-input">Cargo</label>
+        <input type="text" name="role" id="role-input" maxlength="40" placeholder="Cargo que ocupava" required>
+      </div>
+      <div>
+        <label for="role-description-input">Descrição do cargo</label>
+        <input type="text" name="descrição-cargo" id="role-description-input" maxlength="500"
+          placeholder="Descrição do cargo" required>
+      </div>
+      <div>
+        <label for="data-inicio-input">Data de início</label>
+        <input type="text" title="Data que começou no último emprego que teve" name="data-inicio"
+          pattern="^(0?[1-9]|[12][0-9]|3[01])\/(0?[1-9]|1[012])\/([12][09][0-9][0-9])" id="data-inicio-input"
+          placeholder="dd/mm/aaaa" required>
+      </div>
+    </fieldset>
+    <button type="submit" id="button-submit">Enviar</button>
   </form>
   <script src="script.js"></script>
 </body>
