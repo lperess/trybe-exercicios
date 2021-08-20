@@ -21,33 +21,34 @@
       <legend>Dados pessoais</legend>
       <div>
         <label for="name-input">Nome Completo</label>
-        <input type="text" name="name" id="name-input" maxlength="40" placeholder="Digite seu nome" required>
+        <input type="text" name="name" id="name-input" placeholder="Digite seu nome">
       </div>
       <div>
         <label for="email-input">E-mail</label>
-        <input type="email" name="email" id="email-input" maxlength="50" placeholder="Digite seu e-mail" required>
+        <input type="email" name="email" id="email-input" placeholder="Digite seu e-mail">
       </div>
       <div>
         <label for="cpf-input">CPF</label>
-        <input type="text" name="cpf" id="cpf-input" maxlength="11" placeholder="Apenas números" required>
+        <input type="text" name="cpf" id="cpf-input" placeholder="Apenas números">
       </div>
       <div>
         <label for="address-input">Endereço</label>
-        <input type="text" name="address" id="address-input" maxlength="200" placeholder="Rua, Número, Bairro" required>
+        <input type="text" name="address" id="address-input" placeholder="Rua, Número, Bairro">
       </div>
       <div>
         <label for="city-input">Cidade</label>
-        <input type="text" name="city" id="city-input" maxlength="28" placeholder="Cidade" required>
+        <input type="text" name="city" id="city-input" placeholder="Cidade">
       </div>
       <div>
         <label for="state-select">Estado</label>
-        <select name="state" id="state-select" required>
-          <option disabled selected value>Selecione seu estado</option>
+        <select name="state" id="state-select">
+          <option disabled selected value id="defaultOption">Selecione seu estado</option>
         </select>
       </div>
       <div>
+        <p>Tipo de imóvel em que reside:</p>
         <label for="casa-input">Casa</label>
-        <input type="radio" name="tipo-residência" value="casa" id="casa-input" required>
+        <input type="radio" name="tipo-residência" value="casa" id="casa-input" checked>
         <label for="apartamento-input">Apartamento</label>
         <input type="radio" name="tipo-residência" value="apartamento" id="apartamento-input">
       </div>
@@ -56,7 +57,7 @@
       <legend>Dados do seu último emprego</legend>
       <label for="curriculum-input">Resumo do currículo</label>
       <div>
-        <textarea name="curriculo" id="curriculum-input" rows="5" maxlength="1000" required></textarea>
+        <textarea name="curriculo" id="curriculum-input" rows="5"></textarea>
       </div>
       <div>
         <label for="role-input">Cargo</label>
@@ -64,18 +65,20 @@
       </div>
       <div>
         <label for="role-description-input">Descrição do cargo</label>
-        <input type="text" name="descrição-cargo" id="role-description-input" maxlength="500"
-          placeholder="Descrição do cargo" required>
+        <input type="text" name="descrição-cargo" id="role-description-input" placeholder="Descrição do cargo">
       </div>
       <div>
         <label for="data-inicio-input">Data de início</label>
-        <input type="text" title="Data que começou no último emprego que teve" name="data-inicio"
-          pattern="^(0?[1-9]|[12][0-9]|3[01])\/(0?[1-9]|1[012])\/([12][09][0-9][0-9])" id="data-inicio-input"
-          placeholder="dd/mm/aaaa" required>
+        <input type="text" title="Data que começou no último emprego que teve" name="data-inicio" id="data-inicio-input" placeholder="dd/mm/aaaa">
       </div>
     </fieldset>
     <button type="submit" id="button-submit">Enviar</button>
+    <button type="button" id="clear-btn">Limpar</button>
   </form>
+  <div>
+    <p id="result-title"></p>
+    <ul id="result"></ul>
+  </div>
   <script src="script.js"></script>
 </body>
 
