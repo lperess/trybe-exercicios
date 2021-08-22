@@ -103,6 +103,21 @@
             h3.innerText = `Elemento index ${i}`;
             tagMain.appendChild(h3);
         }
+
+        tagH1.classList.add('title');
+
+        document.querySelectorAll('h3').forEach(element => {
+            element.classList.add('description');
+        });
+
+        tagMain.removeChild(tagSectionLeft);
+
+        tagSectionRight.style.marginRight = 'auto';
+
+        tagSection.parentElement.style.background = 'green';
+
+        ul.lastElementChild.remove();
+        ul.lastElementChild.remove();
     </script>
 </body>
 
