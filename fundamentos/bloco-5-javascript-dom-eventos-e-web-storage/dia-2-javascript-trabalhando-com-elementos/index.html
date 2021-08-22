@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+        section {
+            border-color: black;
+            border-style: solid;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .main-content {
+            background-color: yellow;
+        }
+
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .main-content .center-content p {
+            font-style: italic;
+        }
+
+        .main-content .left-content {
+            background-color: green;
+            width: 60%;
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .main-content .left-content .small-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 100%;
+        }
+
+        .main-content .right-content {
+            background-color: blue;
+            width: 60%;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .main-content .description {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const tagH1 = document.createElement('h1');
+        tagH1.innerText = 'Exercício 5.2 - JavaScript DOM';
+        document.body.appendChild(tagH1);
+
+        const tagMain = document.createElement('main');
+        tagMain.className = 'main-content';
+        document.body.appendChild(tagMain);
+
+        const tagSection = document.createElement('section');
+        tagSection.className = 'center-content';
+        tagMain.appendChild(tagSection);
+
+        const tagP = document.createElement('p');
+        tagP.innerText = 'Algum texto';
+        tagSection.appendChild(tagP);
+
+        const tagSectionLeft = document.createElement('section');
+        tagSectionLeft.className = 'left-content';
+        tagMain.appendChild(tagSectionLeft);
+
+        const tagSectionRight = document.createElement('section');
+        tagSectionRight.className = 'right-content';
+        tagMain.appendChild(tagSectionRight);
+
+        const image = document.createElement('img');
+        image.src = 'https://picsum.photos/200';
+        image.className = 'small-image';
+        tagSectionLeft.appendChild(image);
+
+        const ul = document.createElement('ul');
+        const numbers = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis',
+        'Sete', 'Oito', 'Nove', 'Dez'];
+        for (let n of numbers) {
+            const li = document.createElement('li');
+            li.innerText = n;
+            ul.appendChild(li);
+        }
+        tagSectionRight.appendChild(ul);
+
+        for (let i = 0; i < 3; i += 1) {
+            const h3 = document.createElement('h3');
+            h3.innerText = `Elemento index ${i}`;
+            tagMain.appendChild(h3);
+        }
+    </script>
+</body>
+
+</html>
