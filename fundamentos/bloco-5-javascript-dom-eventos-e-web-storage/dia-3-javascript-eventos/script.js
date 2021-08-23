@@ -50,3 +50,19 @@ holidayBtn('Feriados');
 
 // Exercício 3
 
+function holidayBGColor() {
+  const holidayBtn = document.getElementById('btn-holiday');
+  const holidays = document.querySelectorAll('.holiday');
+
+  holidayBtn.addEventListener('click', function () {
+    for (let index = 0; index < holidays.length; index += 1) {
+      if (holidays[index].style.backgroundColor === 'white') {
+        holidays[index].style.backgroundColor = 'rgb(238,238,238)';
+      }
+      else {
+        holidays[index].style.backgroundColor = 'white';
+      }
+    }
+  })
+}
+holidayBGColor();
