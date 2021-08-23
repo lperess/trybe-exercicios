@@ -39,3 +39,14 @@ daysOfMonth();
 
 // Exercício 2
 
+function holidayBtn(nomeBotao) {
+  const btnContainer = document.getElementsByClassName('buttons-container')[0];
+  const btnHoliday = document.createElement('button');
+  btnHoliday.id = 'btn-holiday';
+  btnContainer.appendChild(btnHoliday);
+  btnHoliday.innerText = nomeBotao;
+}
+holidayBtn('Feriados');
+
+// Exercício 3
+
