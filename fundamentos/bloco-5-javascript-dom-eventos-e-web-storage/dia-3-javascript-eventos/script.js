@@ -66,3 +66,14 @@ function holidayBGColor() {
   })
 }
 holidayBGColor();
+
+// Exercício 4
+
+function fridayBtn(nomeBotao) {
+  const btnContainer = document.getElementsByClassName('buttons-container')[0];
+  const fridayBtn = document.createElement('button');
+  fridayBtn.id = 'btn-friday';
+  btnContainer.appendChild(fridayBtn);
+  fridayBtn.innerText = nomeBotao;
+}
+fridayBtn('Sexta-feira');
