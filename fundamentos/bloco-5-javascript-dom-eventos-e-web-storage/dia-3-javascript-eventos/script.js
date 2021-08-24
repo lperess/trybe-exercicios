@@ -73,7 +73,30 @@ function fridayBtn(nomeBotao) {
   const btnContainer = document.getElementsByClassName('buttons-container')[0];
   const fridayBtn = document.createElement('button');
   fridayBtn.id = 'btn-friday';
-  btnContainer.appendChild(fridayBtn);
   fridayBtn.innerText = nomeBotao;
+  btnContainer.appendChild(fridayBtn);
 }
 fridayBtn('Sexta-feira');
+
+// Exercício 5
+
+function fridayText() {
+  const fridayBtn = document.getElementById('btn-friday');
+  const fridays = document.querySelectorAll('.friday');
+
+  fridayBtn.addEventListener('click', function () {
+
+    for (let index = 0; index < fridays.length; index += 1) {
+
+      const dayBefore = fridays[index].previousElementSibling.innerText;
+
+      if(fridays[index].innerText !== 'Sextooou') {
+        fridays[index].innerText = 'Sextooou'
+      }
+      else {
+        fridays[index].innerText = parseInt(dayBefore) + 1;
+      }
+    }
+  })
+}
+fridayText();
