@@ -130,12 +130,20 @@ mouseOut();
 // Exercício 7
 
 function newTask(tarefa) {
-  const myTasks = document.getElementsByClassName('my-tasks')[0];
+  const myTasks = document.querySelector('.my-tasks');
   const task = document.createElement('span');
-  task.innerHTML = `${tarefa}<br>`;
+  task.innerHTML = tarefa;
   myTasks.appendChild(task);
 }
-newTask('cozinhar')
-newTask('arrumar casa')
-newTask('lavar roupa')
+newTask('Cozinhar')
 
+// Exercício 8
+
+function addLegend(color) {
+  const myTasks = document.querySelector('.my-tasks');
+  const legend = document.createElement('div');
+  legend.className = 'task';
+  legend.style.backgroundColor = color;
+  myTasks.appendChild(legend);
+}
+addLegend('red');
