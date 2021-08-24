@@ -147,3 +147,15 @@ function addLegend(color) {
   myTasks.appendChild(legend);
 }
 addLegend('red');
+
+// Exercício 9
+
+function select() {
+  const divs = document.querySelectorAll('div.my-tasks div');
+  divs.forEach(div => {
+    div.addEventListener('click', function(event) {
+      event.target.classList.toggle('selected');
+    })
+  })
+}
+select();
