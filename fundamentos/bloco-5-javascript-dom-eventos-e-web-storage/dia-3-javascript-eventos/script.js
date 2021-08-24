@@ -90,7 +90,7 @@ function fridayText() {
 
       const dayBefore = fridays[index].previousElementSibling.innerText;
 
-      if(fridays[index].innerText !== 'Sextooou') {
+      if (fridays[index].innerText !== 'Sextooou') {
         fridays[index].innerText = 'Sextooou'
       }
       else {
@@ -100,3 +100,32 @@ function fridayText() {
   })
 }
 fridayText();
+
+// Exercício 6
+
+function mouseOver() {
+  const days = document.querySelectorAll('.day');
+
+  days.forEach(day => {
+    day.addEventListener('mouseover', function(event) {
+      event.target.style.fontSize = '30px';
+      event.target.style.fontWeight = '600';
+    })
+  })
+}
+mouseOver();
+
+function mouseOut() {
+  const days = document.querySelectorAll('.day');
+
+  days.forEach(day => {
+    day.addEventListener('mouseout', function(event) {
+      event.target.style.fontSize = '20px';
+      event.target.style.fontWeight = '200';
+    })
+  })
+}
+mouseOut();
+
+// Exercício 7
+
