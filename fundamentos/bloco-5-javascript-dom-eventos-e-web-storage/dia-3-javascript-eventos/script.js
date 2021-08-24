@@ -129,3 +129,13 @@ mouseOut();
 
 // Exercício 7
 
+function newTask(tarefa) {
+  const myTasks = document.getElementsByClassName('my-tasks')[0];
+  const task = document.createElement('span');
+  task.innerHTML = `${tarefa}<br>`;
+  myTasks.appendChild(task);
+}
+newTask('cozinhar')
+newTask('arrumar casa')
+newTask('lavar roupa')
+
