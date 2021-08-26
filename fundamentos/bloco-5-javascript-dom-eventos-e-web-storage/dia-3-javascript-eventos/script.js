@@ -190,3 +190,32 @@ function paintDay() {
   });
 }
 paintDay();
+
+// Exercício Bônus
+
+const taskList = document.querySelector('.task-list');
+const addBtn = document.getElementById('btn-add');
+const taskInput = document.getElementById('task-input');
+
+function createTask() {
+  if (taskInput.value === '') {
+    alert('Escreva um compromisso')
+  } else {
+    const newTask = document.createElement('li');
+    newTask.innerText = taskInput.value;
+    taskList.appendChild(newTask);
+    taskInput.value = '';
+  }
+}
+
+function enterToAddTask(event) {
+    if (event.keyCode === 13) {
+      createTask();
+    }
+  }
+
+function addTask() {
+  addBtn.addEventListener('click', createTask);
+  taskInput.addEventListener('keyup', enterToAddTask);
+}
+addTask();
