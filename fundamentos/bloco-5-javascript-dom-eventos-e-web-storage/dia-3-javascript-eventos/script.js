@@ -107,7 +107,7 @@ function mouseOver() {
   const days = document.querySelectorAll('.day');
 
   days.forEach(day => {
-    day.addEventListener('mouseover', function(event) {
+    day.addEventListener('mouseover', function (event) {
       event.target.style.fontSize = '30px';
       event.target.style.fontWeight = '600';
     })
@@ -119,7 +119,7 @@ function mouseOut() {
   const days = document.querySelectorAll('.day');
 
   days.forEach(day => {
-    day.addEventListener('mouseout', function(event) {
+    day.addEventListener('mouseout', function (event) {
       event.target.style.fontSize = '20px';
       event.target.style.fontWeight = '200';
     })
@@ -151,11 +151,42 @@ addLegend('red');
 // Exercício 9
 
 function select() {
-  const divs = document.querySelectorAll('div.my-tasks div');
-  divs.forEach(div => {
-    div.addEventListener('click', function(event) {
-      event.target.classList.toggle('selected');
+  const legends = document.querySelectorAll('.task');
+  legends.forEach(legend => {
+    legend.addEventListener('click', function (event) {
+      const selected = document.querySelector('.selected');
+      if (!selected) {
+        event.target.classList.add('selected');
+      }
+      if (selected) {
+        selected.classList.remove('selected');
+        event.target.classList.add('selected');
+      }
+      if (selected === event.target) {
+        event.target.classList.toggle('selected');
+      }
     })
   })
 }
 select();
+
+// Exercício 10
+
+function paintDay() {
+  const days = document.querySelectorAll('.day');
+  days.forEach(day => {
+    day.addEventListener('click', function (event) {
+      const selected = document.querySelector('.selected');
+      if (selected) {
+        const legendColor = selected.style.backgroundColor;
+        if (event.target.style.color !== legendColor) {
+          event.target.style.color = legendColor;
+        } else {
+          event.target.style.color = '#777';
+        }
+      }
+
+    });
+  });
+}
+paintDay();
