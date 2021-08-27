@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parte 2 - Exercício 3 - Dia 7.1</title>
+  <script>
+    window.onload = () => {
+      let contador = 0;
+      const btn = document.getElementsByTagName('button')[0];
+      const contadorP = document.getElementsByTagName('p')[0];
+      btn.addEventListener('click', () => { contadorP.innerText = contador += 1 });
+    }
+  </script>
+</head>
+
+<body>
+  <button>Clique aqui</button>
+  <p></p>
+</body>
+
+</html>
