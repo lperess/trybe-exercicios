@@ -62,3 +62,34 @@ console.log(valueByIndex(lesson1, 0));
 const verifyKeyValue = (obj, key, value) => obj[key] === value ? true : false;
 console.log(verifyKeyValue(lesson3, 'turno', 'noite'));
 console.log(verifyKeyValue(lesson3, 'materia', 'Maria Clara'));
+
+// Bônus 1
+const countMathStudents = obj => {
+  let total = 0;
+  const valuesArray = Object.values(obj);
+  for (let value of valuesArray) {
+    if (value.materia === 'Matemática') {
+      total += value.numeroEstudantes;
+    }
+  }
+  return total;
+}
+console.log(countMathStudents(allLessons));
+
+// Bônus 2
+const teacherReport = (obj, teacher) => {
+  const classesArray = Object.values(obj);
+  const report = {};
+  report['professor'] = '';
+  report['aulas'] = [];
+  report['estudantes'] = 0;
+  for (let lesson of classesArray) {
+    if (lesson.professor === teacher) {
+      report['professor'] = teacher;
+      report['aulas'].push(lesson.materia);
+      report['estudantes'] += lesson.numeroEstudantes;
+    }
+  }
+  return report;
+}
+console.log(teacherReport(allLessons, 'Maria Clara'));
