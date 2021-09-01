@@ -3,24 +3,19 @@ const verify = password => {
 
   if (!(password == null)) {
     conditions += 1;
-    console.log(conditions)
-
     if (!(password.length <= 8)) {
       conditions += 1;
     }
   }
-  console.log(conditions)
 
   if (/[A-Z]/.test(password)) { conditions += 1; }
-  console.log(conditions)
 
   if (/[a-z]/.test(password)) { conditions += 1; }
-  console.log(conditions)
+  else { return false; }
 
   if (/[0-9]/.test(password)) { conditions += 1; }
-  console.log(conditions)
 
   if (conditions < 3) { return false; }
   return true;
 }
-console.log(verify('a3'));
+console.log(verify('12345ABCD'));
