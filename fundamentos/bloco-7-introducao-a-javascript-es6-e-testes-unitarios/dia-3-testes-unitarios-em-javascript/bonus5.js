@@ -1,20 +1,26 @@
 const verify = password => {
+  let conditions = 0;
 
-  if (password == null) {
-    throw new Error('password is null');
+  if (!(password == null)) {
+    conditions += 1;
+    console.log(conditions)
+
+    if (!(password.length <= 8)) {
+      conditions += 1;
+    }
   }
-  if (password.length <= 8) {
-    throw new Error('password should be larger than 8 chars');
-  }
-  if (!/[A-Z]/.test(password)) {
-    throw new Error('password should have one uppercase letter at least');
-  }
-  if (!/[a-z]/.test(password)) {
-    throw new Error('password should have one lowercase letter at least');
-  }
-  if (!/[0-9]/.test(password)) {
-    throw new Error('password should have one number at least');
-  }
+  console.log(conditions)
+
+  if (/[A-Z]/.test(password)) { conditions += 1; }
+  console.log(conditions)
+
+  if (/[a-z]/.test(password)) { conditions += 1; }
+  console.log(conditions)
+
+  if (/[0-9]/.test(password)) { conditions += 1; }
+  console.log(conditions)
+
+  if (conditions < 3) { return false; }
   return true;
 }
-console.log(verify('1231234Ab'));
+console.log(verify('a3'));
