@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Currículo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="MIME" href="pikaday.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+  <form method="GET" class="js-form">
+    <fieldset>
+      <legend>Dados pessoais</legend>
+      <div class="mb-3">
+        <label class="form-label" for="name-input">Nome Completo</label>
+        <input data-validate-field="name" type="text" name="name" id="name-input" placeholder="Digite seu nome">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="email-input">E-mail</label>
+        <input data-validate-field="email" type="email" name="email" id="email-input" placeholder="Digite seu e-mail">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="cpf-input">CPF</label>
+        <input data-validate-field="cpf" type="text" name="cpf" id="cpf-input" placeholder="Apenas números">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="address-input">Endereço</label>
+        <input data-validate-field="address" type="text" name="address" id="address-input"
+          placeholder="Rua, Número, Bairro">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="city-input">Cidade</label>
+        <input data-validate-field="city" type="text" name="city" id="city-input" placeholder="Cidade">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="state-select">Estado</label>
+        <select class="form-select" data-validate-field="state" name="state" id="state-select">
+          <option disabled selected value id="defaultOption">Selecione seu estado</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <p>Tipo de imóvel em que reside:</p>
+        <label for="casa-input">Casa</label>
+        <input class="form-check-input" data-validate-field="radio" type="radio" name="tipo-residência" value="casa" id="casa-input" checked>
+        <label for="apartamento-input">Apartamento</label>
+        <input class="form-check-input" data-validate-field="radio" type="radio" name="tipo-residência" value="apartamento"
+          id="apartamento-input">
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Dados do seu último emprego</legend>
+      <label class="form-label" for="curriculum-input">Resumo do currículo</label>
+      <div class="mb-3">
+        <textarea data-validate-field="text" name="curriculo" id="curriculum-input" rows="5"></textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="role-input">Cargo</label>
+        <input data-validate-field="position" type="text" name="role" id="role-input" maxlength="40"
+          placeholder="Cargo que ocupava" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="role-description-input">Descrição do cargo</label>
+        <input data-validate-field="description" type="text" name="descrição-cargo" id="role-description-input"
+          placeholder="Descrição do cargo">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="data-inicio-input">Data de início</label>
+        <input data-validate-field="date" type="date" title="Data que começou no último emprego que teve"
+          name="data-inicio" id="data-inicio-input" placeholder="dd/mm/aaaa">
+      </div>
+    </fieldset>
+    <button type="submit" id="button-submit">Enviar</button>
+    <button type="button" id="clear-btn">Limpar</button>
+  </form>
+  <div>
+    <p id="result-title"></p>
+    <ul id="result"></ul>
+  </div>
+  <script src="script.js" type="module"></script>
+  <script src="./node_modules/pikaday/pikaday.js"></script>
+</body>
+
+</html>
