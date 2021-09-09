@@ -65,3 +65,14 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
+const expectedResult = 'O Senhor dos Anéis';
+
+function authorWith3DotsOnName(arrayOfBooks) {
+  // escreva seu código aqui
+  const author3Initials = arrayOfBooks.find(book => {
+    return book.author.name.split(' ').filter(word => word.endsWith('.')).length === 3
+  });
+  return author3Initials.name;
+};
+
+assert.deepStrictEqual(authorWith3DotsOnName(books), expectedResult);
