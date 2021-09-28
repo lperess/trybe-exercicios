@@ -1,0 +1,46 @@
+html {
+  margin: auto;
+  box-sizing: border-box;
+  background-color: rgb(0, 6, 97);
+  color: white;
+  font-family: sans-serif;
+  padding: 15px 25px;
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+header, header li {
+  font-size: 1.5rem;
+  text-align: center;
+  list-style: none;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@media screen and (min-width: 700px) {
+  html {
+    padding: 15px 100px;
+  }
+  ul.nav {
+    display: flex;
+    justify-content: center;
+  }
+  ul.nav li {
+    margin: 0 15px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    max-width: 1200px;
+  }
+  .aside-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .main-content h1 {
+    text-align: center;
+  }
+}
