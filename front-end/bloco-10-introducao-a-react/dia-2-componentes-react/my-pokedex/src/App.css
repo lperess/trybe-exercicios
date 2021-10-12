@@ -1,0 +1,33 @@
+body {
+  padding: 30px;
+  color: #333;
+  background-color: #37b;
+}
+
+.title {
+  font-size: 3em;
+}
+
+.container {
+  text-align: center;
+}
+
+.pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.pokemon-card {
+  border: 1px solid black;
+  border-radius: 40px;
+  width: 250px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fe0;
+  box-shadow: 4px 6px 5px 1px rgba(34,85,153,0.75);
+  -webkit-box-shadow: 4px 6px 5px 1px rgba(34,85,153,0.75);
+  -moz-box-shadow: 4px 6px 5px 1px rgba(34,85,153,0.75);
+}
