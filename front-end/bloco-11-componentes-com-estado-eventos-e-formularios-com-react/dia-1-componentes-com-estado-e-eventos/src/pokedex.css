@@ -1,0 +1,29 @@
+.pokedex {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.pokedex-buttons-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.next-btn {
+  background-color: green;
+  height: 50px;
+  width: 100px;
+}
+
+.next-btn:disabled {
+  background-color: #d0d0d0;
+}
+
+.filter-btn {
+  background-color: orange;
+  height: 50px;
+  width: 80px;
+  margin: 10px;
+}
